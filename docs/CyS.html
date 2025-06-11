@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AuraxTech | CyberSecurity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #020917, #000814);
+      color: #f0f4f8;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #001f3f, #001025);
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      opacity: 0.05;
+      z-index: 0;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #0ff;
+      margin: 0.5rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    p {
+      font-size: 1.3rem;
+      color: #7dd3fc;
+      position: relative;
+      z-index: 1;
+    }
+    .tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .tag {
+      background: #00bcd4;
+      padding: 0.7rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      color: #000814;
+      box-shadow: 0 0 10px #00bcd4;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .tag:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #4dd0e1;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      border-bottom: 1px solid #003049;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      color: #0ff;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+      margin: 0.7rem 0;
+      list-style: none;
+      padding-left: 1rem;
+      position: relative;
+    }
+    ul li::before {
+      content: '🔒';
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000814;
+      color: #64748b;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .header-top {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      z-index: 2;
+    }
+    .logo {
+      width: 60px;
+      height: auto;
+      filter: drop-shadow(0 0 5px #0ff);
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    /* فريق الأمن السيبراني */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .team-member {
+      background: #001f3f;
+      padding: 1rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.4s;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+    }
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.6);
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      border: 2px solid #0ff;
+    }
+    .team-member h3 {
+      color: #0ff;
+      margin-bottom: 0.5rem;
+    }
+
+    /* خلفية نجوم */
+#stars-container {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -1; /* تحت كل شيء */
+  pointer-events: none;
+}
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      width: 4px;
+      height: 4px;
+      animation: spin 20s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <a href="index.html"><img src="Imges/bf8d9b51-c098-4427-be78-ab059ac0326f(1).png" alt="AuraxTech Logo" class="logo"></a>
+    </div>
+    <h1>CyberSecurity at AuraxTech</h1>
+    <p>🛡️ Protecting your digital world with cutting-edge security</p>
+    <div class="tags">
+      <a href="network-security.html" class="tag">Network Security</a>
+      <a href="threat-detection.html" class="tag">Threat Detection</a>
+      <a href="incident-response.html" class="tag">Incident Response</a>
+      <a href="security-consulting.html" class="tag">Security Consulting</a>
+    </div>
+  </header>
+
+  <section id="overview">
+    <h2>Our CyberSecurity Services</h2>
+    <p>At AuraxTech, we safeguard your business with advanced cybersecurity solutions, ensuring safety and compliance in an evolving threat landscape:</p>
+    <ul>
+      <li>Comprehensive Network Security and Monitoring</li>
+      <li>Real-time Threat Detection and Analysis</li>
+      <li>Incident Response & Recovery Planning</li>
+      <li>Security Audits and Vulnerability Assessments</li>
+      <li>Security Policy Development and Consulting</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Highlighted Security Projects</h2>
+    <ul>
+      <li>Enterprise Firewall Deployment & Management</li>
+      <li>Phishing Attack Simulation & Training</li>
+      <li>Malware Analysis and Containment</li>
+      <li>Security Information and Event Management (SIEM)</li>
+    </ul>
+  </section>
+
+  <section id="team" style="position: relative;">
+    <h2>Meet Our CyberSecurity Team</h2>
+    <div id="stars-container"></div> <!-- خلفية النجوم -->
+    <div class="team">
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Zain A.">
+        <h3>Zain A.</h3>
+        <p>Chief Security Officer</p>
+      </div>
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Maya R.">
+        <h3>Maya R.</h3>
+        <p>Threat Analyst</p>
+      </div>
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Omar T.">
+        <h3>Omar T.</h3>
+        <p>Incident Response Lead</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: 20auraxtechnologies25@gmail.com</p>
+    <p>Phone: +972 052-2901320</p>
+    <p>Location: TelAviv,TelAviv Center.</p>
+  </section>
+
+
+  <footer>
+    &copy; 2025 AuraxTech – All rights reserved.
+  </footer>
+
+  <script>
+    const starsContainer = document.getElementById('stars-container');
+    const numStars = 100;
+
+    for (let i = 0; i < numStars; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.style.top = `${Math.random() * 100}%`;
+      dot.style.left = `${Math.random() * 100}%`;
+      dot.style.animationDuration = `${10 + Math.random() * 30}s`;
+      starsContainer.appendChild(dot);
+    }
+
+    starsContainer.addEventListener('mousemove', (e) => {
+      const bounds = starsContainer.getBoundingClientRect();
+      const centerX = e.clientX - bounds.left;
+      const centerY = e.clientY - bounds.top;
+      starsContainer.querySelectorAll('.dot').forEach(dot => {
+        const dx = dot.offsetLeft - centerX;
+        const dy = dot.offsetTop - centerY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          dot.style.opacity = '1';
+        } else {
+          dot.style.opacity = '0.15';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AuraxTech | Robotics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      color: #e0e6f2;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #112d4e, #1b263b);
+      position: relative;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #00ffea;
+      margin: 0.5rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    p {
+      font-size: 1.3rem;
+      color: #66fcf1;
+      position: relative;
+      z-index: 1;
+    }
+    .tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .tag {
+      background: #00bcd4;
+      padding: 0.7rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      color: #0a192f;
+      box-shadow: 0 0 10px #00bcd4;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .tag:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #4dd0e1;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      border-bottom: 1px solid #0a192f;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      color: #00ffea;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+  margin: 0.7rem 0;
+  list-style: none;
+  padding-left: 2rem; /* زودت المسافة من 1rem إلى 2rem */
+  position: relative;
+}
+
+ul li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem; /* اختياري لتكبير الإيموجي */
+  line-height: 1;
+}
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0a192f;
+      color: #64748b;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* فريق الروبوتيكس */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .team-member {
+      background: #112d4e;
+      padding: 1rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.4s;
+      box-shadow: 0 0 10px rgba(0, 255, 234, 0.3);
+    }
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 255, 234, 0.6);
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      border: 2px solid #00ffea;
+    }
+    .team-member h3 {
+      color: #00ffea;
+      margin-bottom: 0.5rem;
+    }
+
+    /* خلفية دوائر متحركة */
+    #circles-container {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 255, 234, 0.15);
+      animation: pulse 6s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.5); opacity: 0.5; }
+    }
+        .header-top {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      z-index: 2;
+    }
+    .logo {
+      width: 60px;
+      height: auto;
+      filter: drop-shadow(0 0 5px #0ff);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <a href="index.html"><img src="Imges/bf8d9b51-c098-4427-be78-ab059ac0326f(1).png" alt="AuraxTech Logo" class="logo"></a>
+    </div>
+    <h1>Robotics at AuraxTech</h1>
+    <p>🤖 Innovating intelligent machines for a smarter future</p>
+    <div class="tags">
+      <a href="robotics-hardware.html" class="tag">Hardware Design</a>
+      <a href="robotics-ai.html" class="tag">Robotics AI</a>
+      <a href="automation.html" class="tag">Automation</a>
+      <a href="robotics-consulting.html" class="tag">Consulting</a>
+    </div>
+  </header>
+
+  <section id="overview">
+    <h2>Our Robotics Solutions</h2>
+    <p>At AuraxTech, we build advanced robotic systems combining cutting-edge hardware and AI to transform industries:</p>
+    <ul>
+      <li> Custom Robot Design and Prototyping</li>
+      <li> Autonomous Navigation Systems</li>
+      <li> Robotics Software Development</li>
+      <li> Industrial Automation Integration</li>
+      <li> Robotics AI and Machine Learning</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Robotics Projects</h2>
+    <ul>
+      <li>Warehouse Automation Robot</li>
+      <li>Autonomous Drone Navigation</li>
+      <li>Robotic Arm for Precision Manufacturing</li>
+      <li>AI-Powered Service Robots</li>
+    </ul>
+  </section>
+
+  <section id="team" style="position: relative;">
+    <h2>Meet Our Robotics Team</h2>
+    <div id="circles-container"></div>
+    <div class="team">
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Lina S.">
+        <h3>Lina S.</h3>
+        <p>Robotics Engineer</p>
+      </div>
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Carlos M.">
+        <h3>Carlos M.</h3>
+        <p>Automation Specialist</p>
+      </div>
+      <div class="team-member">
+        <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Sara T.">
+        <h3>Sara T.</h3>
+        <p>AI Robotics Developer</p>
+      </div>
+    </div>
+  </section>
+
+   <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: 20auraxtechnologies25@gmail.com</p>
+    <p>Phone: +972 052-2901320</p>
+    <p>Location: TelAviv,TelAviv Center.</p>
+  </section>
+
+
+  <footer>
+    &copy; 2025 AuraxTech – All rights reserved.
+  </footer>
+
+  <script>
+    const circlesContainer = document.getElementById('circles-container');
+    const numCircles = 30;
+
+    for (let i = 0; i < numCircles; i++) {
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+      circle.style.width = `${10 + Math.random() * 40}px`;
+      circle.style.height = circle.style.width;
+      circle.style.top = `${Math.random() * 100}%`;
+      circle.style.left = `${Math.random() * 100}%`;
+      circle.style.animationDelay = `${Math.random() * 6}s`;
+      circlesContainer.appendChild(circle);
+    }
+  </script>
+
+</body>
+</html>
