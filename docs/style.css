@@ -1,0 +1,363 @@
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 1vh;
+    padding-top: 12rem;
+    z-index: 1;
+}
+
+.section-hero {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.div-hero {
+    padding: 0 3.2rem;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.div-hero-text {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4.6rem;
+    font-weight: 700; 
+   
+}
+
+.hero-description {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
+/* section-partners */
+
+.section-partners {
+    position: relative;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2-text-partners {
+    font-size: 4.6rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+}
+
+.partners-title {
+    font-size: 4.6rem;
+    font-weight: 700;
+}
+
+.div-partners {
+    padding: 0 3.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+
+}
+
+.partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section-our-team */
+
+.section-our-team {
+    position: relative;
+    padding: 3.2rem 0;
+}
+
+.main-our-team-text {
+    text-align: center;
+    padding: 0 3.2rem;
+}
+
+.main-our-team-text p {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    margin-bottom: 3.2rem;
+}
+
+.card-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    width: 100%;
+}
+
+.card-item {
+    flex: 0 0 calc(33.333% - 1.34rem);
+    scroll-snap-align: center;
+    margin-right: 0;
+}
+
+.card-list::-webkit-scrollbar {
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin: 2rem 0;
+}
+
+.user-image {
+ width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #4882c5;
+    transition: transform 0.2s ease; /* إضافة انتقال ناعم */
+}
+
+.user-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.2rem 0;
+    color: #222;
+}
+
+.user-image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4882c5;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.user-image:hover {
+    transform: scale(1.1); /* تكبر 10% لما تحرك الماوس فوقها */
+}
+.user-image:active {
+    transform: scale(1.1); /* تكبير 10% عند الضغط */
+}
+
+.user-profession {
+    font-size: 1.4rem;
+    color: #666;
+}
+.glass-about {
+ position: relative;
+  max-width: 400px;
+  width: 350px;
+  height: 350px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: -5rem auto 5rem 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px #4882c5;
+  color: #ffffff;
+  z-index: 2;
+  background-image: url(/Assets/cube-pattern.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.logo-box {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.glass-about p {
+  margin-bottom: 30px; /* أو أي رقم يناسبك */
+  
+}
+.logo-box img {
+  width: 80px; /* عدل الحجم حسب الحاجة */
+  height: auto;
+  opacity: 0.9;
+}
+
+
+.glass-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ad1616;
+}
+
+.glass-content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #978686;
+}
+@media (max-width: 768px) {
+  .glass-about {
+    margin: 2rem auto;
+    max-width: 90%;
+  }
+}
+.glass-about:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #4fa3ff; /* إضاءة حديثة */
+}
+
+
+
+/* القائمة الجانبية */
+
+.sidebar {
+    position: fixed;
+    top: 20%;
+    right: -320px; /* مخفية */
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 8px 0 0 8px;
+    transition: right 0.3s ease;
+    z-index: 10000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+.empty-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+  .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.sidebar-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4882c5;
+    margin-bottom: 1rem;
+}
+
+.sidebar h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.sidebar p {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* زر إغلاق */
+.glass-about {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* التأثير عند تحريك الماوس */
+.image-box:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.5); /* لون عصري أزرق مضيء */
+}
+
+.glass-box:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.6); /* إضاءة بلون modern (تركواز/أخضر نيوني) */
+}
+#closeSidebar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+    color: #888;
+}
+
+#closeSidebar:hover {
+    color: #444;
+}
+
+/* خلفية تعتيم */
+
+.overlay {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 9000;
+}
+
+.overlay.active {
+    display: block;
+}
+
+
+/* Star background */
+.star-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -42vw -4vh 0px 0px #000,25vw -41vh 0px 0px #000,-20vw 49vh 0px 1px #000,5vw 40vh 1px 1px #000,29vw 19vh 1px 0px #000,-44vw -13vh 0px 0px #000,46vw 41vh 0px 1px #000,-3vw -45vh 0px 1px #000,47vw 35vh 1px 0px #000,12vw -8vh 1px 0px #000,-34vw 48vh 1px 1px #000,32vw 26vh 1px 1px #000,32vw -41vh 1px 1px #000,0vw 37vh 1px 1px #000,34vw -26vh 1px 0px #000,-14vw -49vh 1px 0px #000,-12vw 45vh 0px 1px #000,-44vw -33vh 0px 1px #000,-13vw 41vh 0px 0px #000,-36vw -11vh 0px 1px #000,-23vw -24vh 1px 0px #000,-38vw -27vh 0px 1px #000,16vw -19vh 0px 0px #000,28vw 33vh 1px 0px #000,-49vw -4vh 0px 0px #000,16vw 32vh 0px 1px #000,36vw -18vh 1px 0px #000,-25vw -30vh 1px 0px #000,-23vw 24vh 0px 1px #000,-2vw -35vh 1px 1px #000,-25vw 9vh 0px 0px #000,-15vw -34vh 0px 0px #000,-8vw -19vh 1px 0px #000,-20vw -20vh 1px 1px #000,42vw 50vh 0px 1px #000,-32vw 10vh 1px 0px #000,-23vw -17vh 0px 0px #000,44vw 15vh 1px 0px #000,-40vw 33vh 1px 1px #000,-43vw 8vh 0px 0px #000,-48vw -15vh 1px 1px #000,-24vw 17vh 0px 0px #000,-31vw 50vh 1px 0px #000,36vw -38vh 0px 1px #000,-7vw 48vh 0px 0px #000,15vw -32vh 0px 0px #000,29vw -41vh 0px 0px #000,2vw 37vh 1px 0px #000,7vw -40vh 1px 1px #000,15vw 18vh 0px 0px #000,25vw -13vh 1px 1px #000,-46vw -12vh 1px 1px #000,-18vw 22vh 0px 0px #000,23vw -9vh 1px 0px #000,50vw 12vh 0px 1px #000,45vw 2vh 0px 0px #000,14vw -48vh 1px 0px #000,23vw 43vh 0px 1px #000,-40vw 16vh 1px 1px #000,20vw -31vh 0px 1px #000,-17vw 44vh 1px 1px #000,18vw -45vh 0px 0px #000,33vw -6vh 0px 0px #000,0vw 7vh 0px 1px #000,-10vw -18vh 0px 1px #000,-19vw 5vh 1px 0px #000,1vw 42vh 0px 0px #000,22vw 48vh 0px 1px #000,39vw -8vh 1px 1px #000,-6vw -42vh 1px 0px #000,-47vw 34vh 0px 0px #000,-46vw 19vh 0px 1px #000,-12vw -32vh 0px 0px #000,-45vw -38vh 0px 1px #000,-28vw 18vh 1px 0px #000,-38vw -46vh 1px 1px #000,49vw -6vh 1px 1px #000,-28vw 18vh 1px 1px #000,10vw -24vh 0px 1px #000,-5vw -11vh 1px 1px #000,33vw -8vh 1px 0px #000,-16vw 17vh 0px 0px #000,18vw 27vh 0px 1px #000,-8vw -10vh 1px 1px #000;
+    animation: zoom 16s alternate infinite;
+    z-index: -1;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+

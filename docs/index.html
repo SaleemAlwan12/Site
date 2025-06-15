@@ -3,608 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AuraxTech | Smart & Secure Digital Transformation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at top, #0f172a, #000);
-      color: #f5f5f5;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #1f2937, #111827);
-      position: relative;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('https://www.transparenttextures.com/patterns/cubes.png');
-      opacity: 0.05;
-      z-index: 0;
-    }
-    h1 {
-      font-size: 3.5rem;
-      color: #38bdf8;
-      margin: 0.5rem 0;
-      position: relative;
-      z-index: 1;
-    }
-    p {
-      font-size: 1.3rem;
-      color: #94a3b8;
-      position: relative;
-      z-index: 1;
-    }
-    .tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .tag {
-      background: #0ea5e9;
-      padding: 0.7rem 1.2rem;
-      border-radius: 20px;
-      font-weight: bold;
-      color: #fff;
-      box-shadow: 0 0 10px #0ea5e9;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .tag:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #38bdf8;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-      border-bottom: 1px solid #1e293b;
-      animation: fadeIn 1s ease-in;
-    }
-    h2 {
-      color: #38bdf8;
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-ul li {
-  margin: 0.7rem 0;
-  list-style: none;
-  padding-left: 2rem; /* زودت المسافة من 1rem إلى 2rem */
-  position: relative;
-}
-
-ul li::before {
-  content: '➤';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2rem; /* اختياري لتكبير الإيموجي */
-  line-height: 1;
-}
-    .team {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .team-background {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      overflow: hidden;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .dot {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      width: 4px;
-      height: 4px;
-      animation: spin 20s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-      100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
-    }
-.team-member {
   
-  border: 3px solid;
-  border-image-slice: 1;
-  border-width: 3px;
-  border-image-source: linear-gradient(45deg, #0ea5e9, #38bdf8, #0ea5e9);
-}
+  <link rel="stylesheet" href="/CSS/header.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/footer.css">
 
+  <link rel="stylesheet" href="/CSS/general.css">
+  <link rel="stylesheet" href="/CSS/query.css">
 
-.team-member:hover {
-  transform: translateY(-5px); /* بدلاً من -10px */
-  box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
-}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-
-    .team-member img {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      margin-bottom: 0.5rem;
-      border: 2px solid #38bdf8;
-    }
-    .team-member h3 {
-      color: #38bdf8;
-      margin-bottom: 0.5rem;
-    }
-    #contact p {
-      font-size: 1.1rem;
-      color: #cbd5e1;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #0f172a;
-      color: #64748b;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .header-top {
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-  z-index: 2;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-  filter: drop-shadow(0 0 5px #38bdf8);
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-}
-a {
-  text-decoration: none; /* هذا يمنع الخط الأزرق */
-  color: inherit; /* عشان يحافظ على لون النص مثل اللون داخل الـ div */
-}
-#stars-container {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  overflow: hidden;
-  z-index: -1; /* تحت كل شيء */
-  pointer-events: none;
-}
-.team-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-.team {
-  display: flex;
-  gap: 5rem;
-  animation: scrollLeft 85s linear infinite;
-  width: max-content;
-}
-
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.team-member {
-  background: #1e293b;
-  padding: 1rem;
-  border-radius: 15px;
-  text-align: center;
-  transition: transform 0.4s;
-  box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
-
-  width: 310px;       /* عرض ثابت */
-  height: 260px;      /* ارتفاع ثابت */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-
-.team-wrapper:hover .team {
-  animation-play-state:running;
-}
-  </style>
+  <title>AuraxTech - Home</title>
 </head>
 <body>
 
-  <header>
-    <div class="header-top">
-   <a><img src="Imges/bf8d9b51-c098-4427-be78-ab059ac0326f(1).png" alt="AuraxTech Logo" class="logo"></a>
-</div>
+  <!-- Star Background -->
+  <div class="star-background"></div>
 
-    <h1>Welcome to AuraxTech</h1>
-    <p>🚀 Smart & secure digital transformation</p>
-    <div class="tags">
-<a href="AI.html" style="text-decoration: none; color: inherit;">
-  <div class="tag">AI</div>
-</a>
-      <a href="CyS.html" style="text-decoration: none; color: inherit;">
-  <div class="tag">Cybersecurity</div>
-</a>
-     </a>
-      <a href="Robot.html" style="text-decoration: none; color: inherit;">
-  <div class="tag">Robotics</div>
-</a>
-      <a><div class="tag"> Software</div></a>
-    </div>
+  <!-- HEADER -->
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="div-logo">
+        <a class="link-logo" href="">
+          <h1 class="header-logo">AuraxTech</h1>
+        </a>
+      </div>
+
+      <div class="div-main-link">
+        <ul class="ul-nav-links">
+          <li><a href="">Cyber Security</a></li>
+          <li><a href="">computer Science </a></li>
+          <li><a href="">Artificial Intelligence</a></li>
+          <li><a href="">Robotics</a></li>
+        </ul>
+      </div>
+
+      <div class="div-sec-link">
+        <ul class="ul-nav-sec-link">
+          <li><a href="">Request To Join</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <section id="about">
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <section class="section-hero">
+      <div class="div-hero">
+        <div class="div-hero-text">
+          <h2 class="hero-title">Welcome To AuraxTech</h2>
+          <p class="hero-description">Smart & secure digital transformation</p>
+        </div>
+      </div>
+      
+    </section>
+    <br>
+    <br>
+      <br>
+  <section style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+  
+<section style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+  
+  <!-- الصندوق الأول بمحتوى -->
+  <div class="glass-about image-box">
     <h2>About Us</h2>
-    <p>AuraxTech is a cutting-edge tech company specializing in AI, cybersecurity, robotics, and software development. Our mission is to empower businesses with smart and secure digital solutions that shape the future.</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>AI-Powered Automation Solutions</li>
-      <li>Cybersecurity Risk Assessments & Defense</li>
-      <li>Robotics Integration & Development</li>
-      <li>Custom Software Engineering</li>
-    </ul>
-  </section>
-
-  <section id="team">
-    <h2>Our Team</h2>
-    <div class="team-background" id="stars-container"></div>
- <div class="team-wrapper">
-  <div class="team">
-
-  <div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>
-      <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>
-        <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>    <!-- الشخص 2 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Daniel Kim">
-      <h3>Daniel Kim</h3>
-      <p>CTO – Head of Engineering</p>
-    </div>
-
-    <!-- الشخص 3 -->
-    <div class="team-member">
-      <img src="Imges/depositphotos_104564156-stock-illustration-male-user-icon.webp" alt="Michael Lee">
-      <h3>Michael Lee</h3>
-      <p>Cybersecurity Lead</p>
-    </div>
-
-    <!-- تكرار نفس الثلاثة مرة ثانية -->
-
-<div class="team-member">
-      <img src="Imges/1749077437248.jpg" alt="James Carter">
-      <h3>SaleemAlwan</h3>
-      <p>Founder & CEO</p>
-    </div>
-
   </div>
-</div>
+  <!-- الصندوق الثاني الفاضي -->
+  <div class="glass-about image-box">
+      <h2>Our Services</h2>
+  </div>
 
 
-  </section>
+  <!-- الصندوق الثالث الفاضي -->
+  <div class="glass-about image-box">
+    <h2>Why Choose Us</h2>
+  </div>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: 20auraxtechnologies25@gmail.com</p>
-    <p>Phone: +972 052-2901320</p>
-    <p>Location: TelAviv,TelAviv Center.</p>
-  </section>
 
-  <footer>
-    &copy; 2025 AuraxTech – All rights reserved.
-  </footer>
 
+<div id="overlay" class="overlay hidden"></div>
+</section>
+
+
+
+    <section class="section-partners">
+      <h2 class="h2-text-partners">Our Partners</h2>
+      <div class="grid grid--4-cols div-partners">
+        <div class="partner">
+          <img src="/Assets/mincrosoft.png" alt="">
+        </div>
+        <div class="partner">
+          <img src="/Assets/VMware.png" alt="">
+        </div>
+        <div class="partner">
+          <img src="/Assets/google-1.png" alt="">
+        </div>
+        <div class="partner">
+          <img src="/Assets/redhat-1.png" alt="">
+        </div>
+      </div>
+    </section>
+
+     <br>
+     
+     
+    <section.net class="section-our-team">
+
+     
+  <div class="main-our-team-text">
+      <p>Our Team</p>
+  </div>
+
+  <div class="container swiper">
+    <div class="slider-">
+
+      <div class="card-list swiper-wrapper">
+
+        <div class="card-item swiper-slide">
+          <img src="/Assets/saleem.png" alt="User Image" class="user-image" data-name="SaleemAlwan" data-profession="Founder & CEO | Owner | Born In Israel| ben gurion university SWE & CS-A-D  linkedin  :  https://www.linkedin.com/in/saleem-alwan-246554294/">
+        
+          
+          <h2 class="user-name">SaleemAlwan</h2>
+          <p class="user-profession">Founder & CEO</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="/Assets/adnan Amman.png" alt="User Image" class="user-image" data-name="Adnan Mkahal" data-profession="Full Stack Developer">
+          <h2 class="user-name">Adnan Mkahal</h2>
+          <p class="user-profession">Full Stack Developer</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="/Assets/users.png" alt="User Image" class="user-image" data-name="Michael Lee" data-profession="Cybersecurity Lead">
+          <h2 class="user-name">Michael Lee</h2>
+          <p class="user-profession">Cybersecurity Lead</p>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <img src="/Assets/users.png" alt="User Image" class="user-image" data-name="Daniel Kim" data-profession="CTO – Head of Engineering">
+          <h2 class="user-name">Daniel Kim</h2>
+          <p class="user-profession">CTO – Head of Engineering</p>
+        </div>
+
+        <!-- المزيد من العناصر ... -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- القائمة الجانبية -->
+  <div class="sidebar" id="sidebar">
+    <button id="closeSidebar" aria-label="Close sidebar">&times;</button>
+    <img id="sidebarImage" src="" alt="User Image" class="sidebar-image">
+    <h3 id="sidebarName">Name</h3>
+    <p id="sidebarProfession">Profession</p>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  
+    </section.net/ript>
   <script>
-    const starsContainer = document.getElementById('stars-container');
-    const numStars = 100;
+         const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+const closeBtn = document.getElementById('closeSidebar');
 
-    for (let i = 0; i < numStars; i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      dot.style.top = `${Math.random() * 100}%`;
-      dot.style.left = `${Math.random() * 100}%`;
-      dot.style.animationDuration = `${10 + Math.random() * 30}s`;
-      starsContainer.appendChild(dot);
-    }
+const sidebarImage = document.getElementById('sidebarImage');
+const sidebarName = document.getElementById('sidebarName');
+const sidebarProfession = document.getElementById('sidebarProfession');
 
-    starsContainer.addEventListener('mousemove', (e) => {
-      const bounds = starsContainer.getBoundingClientRect();
-      const centerX = e.clientX - bounds.left;
-      const centerY = e.clientY - bounds.top;
-      starsContainer.querySelectorAll('.dot').forEach(dot => {
-        const dx = dot.offsetLeft - centerX;
-        const dy = dot.offsetTop - centerY;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          const angle = Math.atan2(dy, dx);
-          const moveX = Math.cos(angle) * 10;
-          const moveY = Math.sin(angle) * 10;
-          dot.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        } else {
-          dot.style.transform = '';
-        }
-      });
-    });
+document.querySelectorAll('.user-image').forEach(img => {
+  img.addEventListener('click', () => {
+    // جلب بيانات من خصائص data-attributes
+    const name = img.getAttribute('data-name');
+    const profession = img.getAttribute('data-profession');
+    const src = img.getAttribute('src');
+
+    // تعبئة البيانات في القائمة
+    sidebarName.textContent = name;
+    sidebarProfession.textContent = profession;
+    sidebarImage.src = src;
+    sidebarImage.alt = `Image of ${name}`;
+
+    // إظهار القائمة والخلفية
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  });
+});
+
+// إغلاق القائمة عند الضغط على زر الإغلاق أو الخلفية
+closeBtn.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
   </script>
+    <script>
+  
+      const swiper = new Swiper('.slider-wrapper', {
+      
+    loop: true,
+  
+        grabCursor: true,
+        spaceBetween: 45,
+  
+        navigation: {
+          nextEl: '.swiper-button-next',
+     
+       prevEl: '.swiper-button-prev',
+        },
+  
+        breakpoints: {
+          0: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        }
+      }); 
+    </script>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="grid grid--5-cols footer-navs">
+      <div class="div-logo-title">
+        <p class="footer-logo-title">AuraxTech</p>
+      </div>
+      <nav class="footer-nav">
+        <p class="footer-text-title">Support</p>
+        <ul class="ul-link-footer">
+          <li><a href="">Contact Support</a></li>
+          <li><a href="">Training & Certification</a></li>
+          <li><a href="">Technical Support</a></li>
+          <li><a href="">EPM SaaS Register / Login</a></li>
+          <li><a href="">Product Security</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav">
+        <p class="footer-text-title">Resources</p>
+        <ul class="ul-link-footer">
+          <li><a href="">Resource Center</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">CIO Connection</a></li>
+          <li><a href="">CyberArk Blueprint</a></li>
+          <li><a href="">Scan Your Network</a></li>
+          <li><a href="">Marketplace</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav">
+        <p class="footer-text-title">Partners</p>
+        <ul class="ul-link-footer">
+          <li><a href="">Partner Network</a></li>
+          <li><a href="">Partner Communityexternal</a></li>
+          <li><a href="">Become a Partner</a></li>
+          <li><a href="">Alliance Partner</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav">
+        <p class="footer-text-title">Company</p>
+        <ul class="ul-link-footer">
+          <li><a href="">Investor Relations</a></li>
+          <li><a href="">Leadership</a></li>
+          <li><a href="">Board of Directors</a></li>
+          <li><a href="">Newsroom</a></li>
+          <li><a href="">Office Locations</a></li>
+          <li><a href="">Environmental, Social and Governance</a></li>
+          <li><a href="">Trust Center</a></li>
+          <li><a href="">Careers – We're Hiring!</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="div-end-footer">
+      <div class="div-copyright">
+        <p class="footer-copyright">&copy; 2025 AuraxTech – All rights reserved.</p>
+      </div>
+      <div class="div-policy">
+        <ul class="ul-links-policy">
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Your Privacy Choices</a></li>
+        </ul>
+      </div>
+      <div class="div-social">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

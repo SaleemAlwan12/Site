@@ -1,0 +1,46 @@
+
+/* Base size: 1rem = 10px */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/**************************/
+/* BELOW 1200px (Large tablets / small laptops) */
+/**************************/
+@media (max-width: 75em) { /* 1200px */
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) { /* 944px */
+  html {
+    font-size: 50%; /* 8px */
+  }
+}
+
+/**************************/
+/* BELOW 704px (Small tablets / phablets) */
+/**************************/
+@media (max-width: 44em) { /* 704px */
+  html {
+    font-size: 43.75%; /* 7px */
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+@media (max-width: 34em) { /* 544px */
+  html {
+    font-size: 37.5%; /* 6px */
+  }
+
+  .footer-navs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

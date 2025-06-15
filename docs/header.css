@@ -1,0 +1,87 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  margin: 1.8rem auto;
+  padding: 0 3.2rem;
+
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.69);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid #657f9e;
+box-shadow: 0 6px 10px #697788;
+  height: 8rem;
+  width: 95%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-logo {
+  text-decoration: none;
+  color: #FFFFFF;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.ul-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.ul-nav-links li {
+    padding: 1rem;
+}
+
+.ul-nav-links li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  
+}
+
+.ul-nav-links li a:hover {
+  background-color: #4882c5;
+  color: #000000;
+}
+
+.ul-nav-sec-link {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul-nav-sec-link li a {
+   display: block;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+   background-color: #4882c5;
+
+}
+.ul-nav-sec-link li a:hover {
+  background-color: #ffffff; /* الخلفية تصير بيضاء */
+  color: #4882c5; /* النص يصير بلون أزرق لتباين مناسب */
+}
